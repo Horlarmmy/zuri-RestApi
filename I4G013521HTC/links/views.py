@@ -10,11 +10,6 @@ class PostListApi(generics.ListAPIView):
 class PostCreateApi(generics.CreateAPIView):
     queryset = Link.objects.filter(active=True)
     serializer_class = LinkSerializer
-
-class PostListApi(generics.RetrieveAPIView):
-    queryset = Link.objects.filter(active=True)
-    serializer_class = LinkSerializer
-
 class PostUpdateApi(generics.UpdateAPIView):
     queryset = Link.objects.filter(active=True)
     serializer_class = LinkSerializer
